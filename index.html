@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>youtube clone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>youtube UI clone</title>
+    <!--google font icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+
     <style>
         .thumbnail{
             width: 300px;
@@ -21,7 +23,6 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100
         margin-bottom: 20px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
 .search-bar {
         flex: 1;
         font-size: 16px;
@@ -55,11 +56,6 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100
             width:50px;
             vertical-align:top;
         }
-        .text{
-            font-family:"Roboto", Arial;
-            display:inline-block;
-            width:230px;
-        }
         p{
             margin-top:0;
         }
@@ -72,77 +68,30 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100
             font-size: 14px;
             margin-bottom:6px;
         }
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
     </style>
 </head>
 <body>
     <div class="header">
-        <input class="search-bar" type="text" placeholder="Search">
-    </div>
-    <div class="video-container">
-    <div class="box">
-        <div class="thumb">
-            <img class="thumbnail" src="thumbnails/thumbnail2.avif">
+        <div class="header-left">
+            <i class="material-symbols-outlined">menu</i>
+            <img src="logo.jpg">
         </div>
-        <div class="pro-text">
-            <div class="profile">
-                <img class="pro" src="profiles/profile1.jpg">
-        </div>
-        <div class="text">
-                <p class="p1">Google Summer Internship 2026 | Complete Guide with Preparation Tips</p>
-                <p class="p2">Jenny's Lectures CS IT</p>
-                <p class="p3">1.93M subscribers</p>
-        </div>
-    </div>
     </div>
 
-        <d class="box">
-            <div class="thumb">
-                <img class="thumbnail" src="thumbnails\THUMBNAIL-2.JPG">
-            </div>
-            <div class="pro-text">
-                <div class="profile">
-                    <img class="pro" src="profiles\PROFILE-2.JPG">
-                </div>
-                <div class="text">
-                    <p class="p1">Google Summer Internship 2026 | Complete Guide with Preparation Tips</p>
-                    <p class="p2">Jenny's Lectures CS IT</p>
-                    <p class="p3">1.93M subscribers</p>
-        </div>
+    <div class="header-search">
+        <form action="">
+            <input type="text" placeholder="Search"/>
+            <button><i class="material-symbols-outlined">search</i></button>
+        </form>
     </div>
-    <div class="video-container">
-    <div class="box">
-        <div class="thumb">
-            <img class="thumbnail" src="thumbnails/thumbnail2.avif">
-        </div>
-        <div class="pro-text">
-            <div class="profile">
-                <img class="pro" src="profiles/profile1.jpg">
-            </div>
-        </div>
-        <div class="text">
-                <p class="p1">Google Summer Internship 2026 | Complete Guide with Preparation Tips</p>
-                <p class="p2">Jenny's Lectures CS IT</p>
-                <p class="p3">1.93M subscribers</p>
-        </div>
-    </div>
-    </div>
-<div class="video-container"></div>
-    <div class="box">
-        <div class="thumb">
-            <img class="thumbnail" src="thumbnails\THUMBNAIL-2.JPG">
-        </div>
-            <div class="pro-text">
-            <div class="profile">
-                <img class="pro" src="profiles\PROFILE-2.JPG">
-            </div>
-            <div class="text">
-                <p class="p1">Google Summer Internship 2026 | Complete Guide with Preparation Tips</p>
-                <p class="p2">Jenny's Lectures CS IT</p>
-                <p class="p3">1.93M subscribers</p>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <div class=""header_icons></div>
+
 </body>
 </html>
