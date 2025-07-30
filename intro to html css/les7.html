@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 4</title>
+    <script>
+        // Function to show the destination link when an image is clicked
+        function showDestinationLink(linkElement, id) {
+            const pathElement = document.getElementById(id);
+            pathElement.textContent = `Destination Path: ${linkElement.href}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Image is a link</h2>
+    <p>The image is a link. You can click on it to display the destination path.</p>
+    
+    <h1>My profile</h1>
+    <a href="http://127.0.0.1:5500/html_practice/myfriendprofile.html" onclick="showDestinationLink(this, 'destination-path-1')">
+        <img src="https://images.unsplash.com/photo-1733041449046-0a5f035582c2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="link to my profile"
+        style="width:300px;height:300px;">
+    </a>
+    <p id="destination-path-1"></p> <!-- Area to display the destination path for the first image -->
+    
+    <h2>Friend profile</h2>
+    <a href="http://127.0.0.1:5500/html_practice/myfriendprofile.html" onclick="showDestinationLink(this, 'destination-path-2')">
+        <img src="anita-austvika-WoWqrIP90do-unsplash.jpg" alt="Image" style="width:300px;height:300px;">
+    </a>
+    <p id="destination-path-2"></p> <!-- Area to display the destination path for the second image -->
+</body>
+</html>

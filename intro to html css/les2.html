@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+        .day {
+            border: 1px solid #d649e6;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .day:hover {
+            background-color: #ed71bd;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(230, 102, 230);
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Calendar</h1>
+    <div class="calendar" id="calendar"></div>
+
+    <div class="modal" id="modal">
+        <h2>Add Note</h2>
+        <textarea id="note" rows="4" cols="50"></textarea><br>
+        <button onclick="saveNote()">Save</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script>
+        const calendar = document.getElementById('calendar');
+        const modal = document.getElementById('modal');
+        const noteInput = document.getElementById('note');
+        let selectedDay;
+
+        function createCalendar() {
+            for (let i = 1; i <= 30; i++) {
+                const day = document.createElement('div');
+                day.className = 'day';
+                day.innerText = i;
+                day.onclick = () => openModal(i);
+                calendar.appendChild(day);
+            }
+        }
+
+        function openModal(day) {
+            selectedDay = day;
+            noteInput.value = localStorage.getItem(`note-${day}`) || '';
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        function saveNote() {
+            localStorage.setItem(`note-${selectedDay}`, noteInput.value);
+            closeModal();
+        }
+
+        createCalendar();
+    </script>
+</body>
+    <style>
+        body {
+            background-color: #ffc0cb;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 40px;
+            text-shadow: 2px 2px #f97dbb;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+        }
+        .day {
+            background-color: #ec54aa;
+            border-radius: 50%;
+            padding: 10px;
+            background-image: url("https://www.pngkey.com/png/detail/221-2214782_cartoon-sticker-png.png"), url("https://i.pinimg.com/originals/2e/c6/9a/2ec69a3f5b7d2b6c9b8c7f5c4f8f5c5d.png");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            text-align: center;
+            cursor: pointer;
+        }
+        .day:hover {
+            background-color: #fef8fb;
+        }
+        .modal {
+            background-color: #b667e0;
+            border-radius: 10px;
+        }
+        .modal.active {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-image: url("https://example.com/logo1.png"), url("https://example.com/logo2.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+        #note {
+            background-color: #ffd7be;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</html>
