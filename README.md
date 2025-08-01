@@ -8,6 +8,13 @@ This project is **still in progress**, and more features will be added soon afte
 -sidebar & header structure
 -embedded video section
 -bug fixes and file structure cleanup
+
+## ✅ Recent Updates
+- ✔ Sidebar now opens/closes using a responsive menu icon
+- ✔ Fully mobile-friendly layout for smaller screens
+- ✔ New *Video Page* created with functional video controls
+- 🔧 Minor bug fixes and UI improvement
+
 ##Tutorial credit
 built by following https://youtu.be/4ykAepVkG5Y?si=sK3rmX-GVismsGqg -code written and customized by me.
 ##disclaimer
