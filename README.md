@@ -1,5 +1,5 @@
 this is the practice code using HTML, CSS to build youtube clone 
-#youtube clone 
+#youtube clone
 a front-end UI clone of youtube built as part of a learning exercise while following a tutorial by greatstack's Easy Tutorials.
 This project is **still in progress**, and more features will be added soon after my learning.
 ##features implemented so far
