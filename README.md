@@ -14,9 +14,10 @@ This project is **still in progress**, and more features will be added soon afte
 - ✔ Fully mobile-friendly layout for smaller screens
 - ✔ New *Video Page* created with functional video controls
 - 🔧 Minor bug fixes and UI improvement
- ## 🛠 In Progress
-- Improving layout responsiveness for smaller screens
-- Planning to add navbar toggle animation
+## 🚀 Recent Updates
+- Enhanced mobile responsiveness
+- Improved layout for better UI/UX
+- Added sidebar toggle & video player with controls
 
 ##Tutorial credit
 built by following https://youtu.be/4ykAepVkG5Y?si=sK3rmX-GVismsGqg -code written and customized by me.
